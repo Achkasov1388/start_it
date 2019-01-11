@@ -15,8 +15,9 @@
         <link href="<?php echo get_template_directory_uri(); ?>/images/favicon.png" rel="shortcut icon" type="image/png">
 
         <!-- Lead Style -->
-        <link href="<?php echo get_template_directory_uri(); ?>/css/style.css" rel="stylesheet" type="text/css">
-
+        <?php
+        wp_head();
+        ?>
     </head>
 
     <body>
@@ -29,17 +30,29 @@
                         <div class="logo">
                             <a href="index.html"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="logo"></a>
                         </div>
-                        <div class="nav-inner">
-                            <div id="mobile-toggle" class="mobile-btn"></div>
-                            <ul class="main-menu">
-                                <li class="menu-item"><a class="active" href="index.html#slider">Home</a></li>
-                                <li class="menu-item"><a href="index.html#services">Services</a></li>
-                                <li class="menu-item"><a href="index.html#about">About Us</a></li>
-                                <li class="menu-item"><a href="index.html#works">Portfolio</a></li>
-                                <li class="menu-item"><a href="index.html#blog">Blog</a></li>
-                                <li class="menu-item"><a href="index.html#contact">Contact</a></li>
-                            </ul>
-                        </div>
+                            <?php 
+                            wp_nav_menu( array(
+                                'theme_location'  => '',
+                                'menu'            => '', 
+                                'container'       => 'div', 
+                                'container_class' => 'nav-inner', 
+                                'container_id'    => '',
+                                'menu_class'      => 'main-menu', 
+                                'menu_id'         => '',
+                                'echo'            => true,
+                                'fallback_cb'     => 'wp_page_menu',
+                                'before'          => '',
+                                'after'           => '',
+                                'link_before'     => '',
+                                'link_after'      => '',
+                                'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                                'depth'           => 0,
+                                'walker'          => '',
+                               
+                                
+                            ) );
+                            ?>
+                            
                     </nav>
                 </div>
             </div>
