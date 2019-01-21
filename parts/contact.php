@@ -5,15 +5,21 @@
                             <div class="contact-info">
                                 <div class="contact-info-details">
                                     <h4>Phone</h4>
-                                    <p>+ 123 - 456 -789,   + 987 - 654 - 321</p>
+                                    <p>
+                                        <?php the_field('site_phone','options'); ?>
+                                    </p>
                                 </div>
                                 <div class="contact-info-details">
                                     <h4>Address</h4>
-                                    <p>RK road, United states of America</p>
+                                    <p>
+                                        <?php the_field('sity_home','options'); ?>
+                                    </p>
                                 </div>
                                 <div class="contact-info-details">
                                     <h4>E-mail</h4>
-                                    <p>carrbyagency@gmail.com</p>
+                                    <p>
+                                        <?php the_field('sity_email','options'); ?>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -50,12 +56,26 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-lg-6">
+                                                    <?php if( have_rows('seti','options') ): ?>
+
                                                     <ul class="top-social list-inline">
-                                                        <li><a href="index.html#"><i class="fa fa-facebook"></i></a></li>
-                                                        <li><a href="index.html#"><i class="fa fa-google-plus"></i></a></li>
-                                                        <li><a href="index.html#"><i class="fa fa-twitter"></i></a></li>
-                                                        <li><a href="index.html#"><i class="fa fa-skype"></i></a></li>
+
+                                                            <?php while( have_rows('seti','options') ): the_row(); ?>
+
+                                                                <li>
+                                                                    <a href="<?php the_sub_field('link'); ?>">
+                                                                        <i class="fa fa-<?php the_sub_field('link_class'); ?>"></i>
+                                                                    </a>
+                                                                </li>
+
+                                                            <?php endwhile; ?>
+
                                                     </ul>
+
+                                                    <?php endif; ?>
+
+
+
                                                 </div>
                                             </div>
                                         </div>

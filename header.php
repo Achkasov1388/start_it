@@ -28,7 +28,13 @@
                 <div class="container">
                     <nav id="flexmenu">
                         <div class="logo">
-                            <a href="index.html"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="logo"></a>
+
+                            <?php if (get_field('site_logo','options')) : ?>
+                                <a href="/">
+                                    <img src="<?php echo get_field('site_logo','options')['url']; ?>" />
+                                </a>
+                            <?php endif; ?>
+
                         </div>
                             <?php 
                             wp_nav_menu( array(
