@@ -20,6 +20,8 @@ add_image_size('about-2', 480, 285, false);
 add_image_size('portfolio', 262, 262, false);
 add_image_size('portfolio', 360, 272, false);
 add_image_size('article', 360, 272, false);
+add_image_size('blog-single', 750, 567, false);
+add_image_size('blog-next', 150, 113, false);
 
 add_theme_support('menus');
 
