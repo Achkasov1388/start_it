@@ -34,7 +34,8 @@ function services_post_type() {
         'labels' => $labels,
         'public' => true,
         'show_ui' => true, // показывать интерфейс в админке
-        'has_archive' => true,
+        'has_archive' => false,
+        'post_type' => 'services',
         'menu_position' => 20, // порядок в меню
         'supports' => array( 'title', 'editor', 'comments', 'author', 'thumbnail')
     );
