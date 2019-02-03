@@ -90,74 +90,7 @@ the_post();
     <section id="testimonials" class="testimonials testimonials1">
         <div class="container">
             <div class="owl-carousel owl-theme testimonial_carousel">
-                <div class="item">
-                    <div class="testibox">
-                        <div class="testi-img">
-
-
-                            <img src="images/testimonial/reviewer-1.png" alt="">
-                        </div>
-                        <div class="testi-content">
-                            <ul>
-                                <li><i class="ion-ios-star"></i></li>
-                                <li><i class="ion-ios-star"></i></li>
-                                <li><i class="ion-ios-star"></i></li>
-                                <li><i class="ion-ios-star"></i></li>
-                                <li><i class="ion-ios-star"></i></li>
-                            </ul>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accntium oloremque
-                                laudantium, totam rem aperiam, eaque ipsa ab illo inventore veritatis et quasi rchitecto
-                                beatae vitae dictaexplicabo. Nemo enim voluptatem quia.Sed ut perspiciatis unde omnis
-                                iste natus error sit voluptatem </p>
-                            <h4>Jeny Doe</h4>
-                            <h6>CEO, Advertising Corp</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="testibox">
-                        <div class="testi-img">
-                            <img src="images/testimonial/reviewer-1.png" alt="">
-                        </div>
-                        <div class="testi-content">
-                            <ul>
-                                <li><i class="ion-ios-star"></i></li>
-                                <li><i class="ion-ios-star"></i></li>
-                                <li><i class="ion-ios-star"></i></li>
-                                <li><i class="ion-ios-star"></i></li>
-                                <li><i class="ion-ios-star-half"></i></li>
-                            </ul>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accntium oloremque
-                                laudantium, totam rem aperiam, eaque ipsa ab illo inventore veritatis et quasi rchitecto
-                                beatae vitae dictaexplicabo. Nemo enim voluptatem quia.Sed ut perspiciatis unde omnis
-                                iste natus error sit voluptatem </p>
-                            <h4>Jeny Doe</h4>
-                            <h6>CEO, Advertising Corp</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="testibox">
-                        <div class="testi-img">
-                            <img src="images/testimonial/reviewer-1.png" alt="">
-                        </div>
-                        <div class="testi-content">
-                            <ul>
-                                <li><i class="ion-ios-star"></i></li>
-                                <li><i class="ion-ios-star"></i></li>
-                                <li><i class="ion-ios-star"></i></li>
-                                <li><i class="ion-ios-star-half"></i></li>
-                                <li><i class="ion-ios-star-outline"></i></li>
-                            </ul>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accntium oloremque
-                                laudantium, totam rem aperiam, eaque ipsa ab illo inventore veritatis et quasi rchitecto
-                                beatae vitae dictaexplicabo. Nemo enim voluptatem quia.Sed ut perspiciatis unde omnis
-                                iste natus error sit voluptatem </p>
-                            <h4>Jeny Doe</h4>
-                            <h6>CEO, Advertising Corp</h6>
-                        </div>
-                    </div>
-                </div>
+                <?php get_template_part('parts/testimonials'); ?>
             </div>
         </div>
     </section>

@@ -86,4 +86,19 @@ if( function_exists('acf_add_options_page') ) {
 
 }
 
-?>
+
+
+add_action( 'init', 'Testimonial_post_type' );
+function Testimonial_post_type() {
+    $labels = array('name' => 'Отзывы' );
+    $args = array(
+        'labels' => $labels,
+        'public' => false,
+        'show_ui' => true, // показывать интерфейс в админке
+        'has_archive' => false,
+        'post_type' => 'testimonial',
+        'menu_position' => 20, // порядок в меню
+        'supports' => array( 'title', 'editor', 'comments', 'author', 'thumbnail')
+    );
+    register_post_type('testimonial', $args);
+}

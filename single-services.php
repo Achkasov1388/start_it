@@ -110,7 +110,6 @@ the_post();
         </div>
     </section>
 
-
     <section id="testimonials" class="testimonials testimonials2">
         <div class="container">
             <div class="section-title">
@@ -118,63 +117,7 @@ the_post();
                 <p>Lorem ipsum dolor sit, consectet ipsum dolor sit</p>
             </div>
             <div class="owl-carousel owl-theme testimonial_carousel2">
-                <div class="item">
-                    <div class="testibox">
-                        <div class="testi-img">
-                            <img src="images/testimonial/reviewer-1.png" alt="">
-                        </div>
-                        <div class="testi-content">
-                            <ul>
-                                <li><i class="ion-ios-star"></i></li>
-                                <li><i class="ion-ios-star"></i></li>
-                                <li><i class="ion-ios-star"></i></li>
-                                <li><i class="ion-ios-star"></i></li>
-                                <li><i class="ion-ios-star"></i></li>
-                            </ul>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit eaque ipsa ab illo inventore veritatis et quasi architecto  voluptatem quia.Sed ut perspiciatis</p>
-                            <h4>Jeny Doe</h4>
-                            <h6>CEO, Advertising Corp</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="testibox">
-                        <div class="testi-img">
-                            <img src="images/testimonial/reviewer-2.png" alt="">
-                        </div>
-                        <div class="testi-content">
-                            <ul>
-                                <li><i class="ion-ios-star"></i></li>
-                                <li><i class="ion-ios-star"></i></li>
-                                <li><i class="ion-ios-star"></i></li>
-                                <li><i class="ion-ios-star"></i></li>
-                                <li><i class="ion-ios-star-half"></i></li>
-                            </ul>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit eaque ipsa ab illo inventore veritatis et quasi architecto  voluptatem quia.Sed ut perspiciatis</p>
-                            <h4>Jeny Doe</h4>
-                            <h6>CEO, Advertising Corp</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="testibox">
-                        <div class="testi-img">
-                            <img src="images/testimonial/reviewer-1.png" alt="">
-                        </div>
-                        <div class="testi-content">
-                            <ul>
-                                <li><i class="ion-ios-star"></i></li>
-                                <li><i class="ion-ios-star"></i></li>
-                                <li><i class="ion-ios-star"></i></li>
-                                <li><i class="ion-ios-star-half"></i></li>
-                                <li><i class="ion-ios-star-outline"></i></li>
-                            </ul>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit eaque ipsa ab illo inventore veritatis et quasi architecto  voluptatem quia.Sed ut perspiciatis</p>
-                            <h4>Jeny Doe</h4>
-                            <h6>CEO, Advertising Corp</h6>
-                        </div>
-                    </div>
-                </div>
+                <?php get_template_part('parts/testimonials'); ?>
             </div>
         </div>
     </section>

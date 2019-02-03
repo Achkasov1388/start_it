@@ -38,14 +38,38 @@ the_post();
 
                         </div>
 
+
                         <div class="pagination-div">
+                            <?php
+                            $articlesCount = wp_count_posts('post');
+                            if($articlesCount->publish > $articles->get('posts_per_page')) : ?>
                             <ul class="pagination">
-                                <li><a class="page-numbers current" href="blog.html#">1</a></li>
-                                <li><a class="page-numbers" href="blog.html#">2</a></li>
-                                <li><a class="page-numbers" href="blog.html#">3</a></li>
-                                <li><a class="page-numbers" href="blog.html#"><i
-                                                class="fa fa-angle-double-right"></i></a></li>
+                                <?php
+                                $articlesPages = ceil(
+                                        $articlesCount->publish / $articles->get('posts_per_page')
+                                );
+
+                                for($i = 1; $i <= $articlesPages; $i++) :
+                                    $pageClassName = 'page-numbers';
+                                    if($i == get_query_var('paged')) {
+                                        $pageClassName .= ' current';
+                                    }
+                                ?>
+                                    <li>
+                                        <a class="<?php echo $pageClassName; ?>" href="<?php echo get_pagenum_link($i); ?>">
+                                            <?php echo $i; ?>
+                                        </a>
+                                    </li>
+                                <?php
+                                endfor; ?>
+
+                                <li>
+                                    <a class="page-numbers" href="<?php echo get_pagenum_link(get_query_var('paged') + 1); ?>">
+                                        <i class="fa fa-angle-double-right"></i>
+                                    </a>
+                                </li>
                             </ul>
+                            <?php endif; ?>
                         </div>
                     </div>
 
